@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilmsByGenre /> should render button with right name, class and onClick method 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;

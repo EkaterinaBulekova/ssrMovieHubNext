@@ -1,0 +1,45 @@
+.movie_info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: unset;
+    flex-shrink: unset;
+}
+
+.movie_card{
+    flex: 0 1 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie_img{
+    flex: 0 1 90%;
+    max-width: 90%;
+    min-width: 20em;
+    margin-bottom: 1em;
+}
+
+.movie_title{
+    margin: 1%;
+    flex: 0 1 80%;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.movie_release_box{
+    margin:1%;
+    flex: 0 1 14%;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.movie_release_date{
+    border: 2 #4e4848;
+    border-style: solid;
+}
+
+.movie_genres{
+    margin: 1%;
+    flex: 0 1 80%;
+}

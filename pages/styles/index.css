@@ -1,0 +1,22 @@
+    .title
+    {
+      font-family: 'Arial';      
+    }
+
+    .post_ul {
+      padding: 0;
+    }
+
+    .post_li {
+      list-style: none;
+      margin: 5px 0;
+    }
+
+    .postlink{
+      text-decoration: none;
+      color: blue;
+    }
+
+    .postlink:hover {
+      opacity: 0.6;
+    }

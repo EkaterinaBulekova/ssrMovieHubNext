@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    background-image:url("/static/HeaderBackground.jpg");
+    background-size: 100% 100%;
+    background-color: rgb(85, 82, 82);
+    background-blend-mode: overlay;
+    color: #ce5d6e;
+}
+.name{
+    flex: 0 1 70%;
+    min-height: 3em;
+    font-weight: bold;
+    margin: 1em 0 1em 5%;
+}

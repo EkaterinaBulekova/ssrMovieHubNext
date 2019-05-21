@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchFilter /> should render buttons with onClick method 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
