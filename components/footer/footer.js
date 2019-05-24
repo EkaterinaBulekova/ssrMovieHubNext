@@ -12,13 +12,13 @@ const Footer = styled.div`{
   font-weight: bold;
 }`;
 
-const Title = styled.div`{ margin: 1em 0 1em 2em;}`;
+const Title = styled.div`{ 
+   margin: 1em 0 1em 2em;}`;
 
 const AppFooter = () => (
   <Footer>
     <Title>Netflixrolette</Title>
   </Footer>
 );
-
 
 export default AppFooter;

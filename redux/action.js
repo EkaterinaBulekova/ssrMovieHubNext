@@ -15,11 +15,9 @@ export function setMovies(data) {
 }
 
 export function fetchFilteredMovies(filter) {
-  return (dispatch) => {
-    return getData(filter).then(({ data }) => {
-      dispatch(setMovies(data));
-    });
-  };
+  return dispatch => getData(filter).then(({ data }) => {
+    dispatch(setMovies(data));
+  });
 }
 
 export function setSearch(search) {

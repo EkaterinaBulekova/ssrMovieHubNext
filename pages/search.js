@@ -10,6 +10,7 @@ import ErrorBoundary from '../components/error-boundary/error-boundary';
 import FilmsResults from '../components/films-results/films-results';
 import Message from '../components/message/message';
 import * as actions from '../redux/action';
+import sortMovies from '../selector/sortSelector';
 
 const DynamicMovieList = dynamic({
   loader: () => import('../components/movie-list/movie-list'),
@@ -42,7 +43,7 @@ export class SearchPage extends React.Component<Props> {
     const {
       startSearch, searchBy, sortBy, search,
     } = this.props;
-    if (search !== '' && (prevProps.sortBy !== sortBy || prevProps.searchBy !== searchBy)) {
+    if (search !== '' && prevProps.searchBy !== searchBy) {
       const filter = { sortBy, searchBy, search };
       startSearch(filter);
     }
@@ -85,8 +86,8 @@ SearchPage.getInitialProps = async (context) => {
 };
 
 function mapStateToProps(state) {
-  const { searchBy, sortBy, films } = state;
-  return { searchBy, sortBy, movies: films };
+  const { searchBy, sortBy } = state;
+  return { searchBy, sortBy, movies: sortMovies(state) };
 }
 
 function mapDispatchToProps(dispatch) {

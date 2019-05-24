@@ -15,7 +15,7 @@ type MovieType = {
   overview: String,
 };
 
-const MovieList = ({movies}: Array<MovieType>) => {
+const MovieList = ({ movies }: Array<MovieType>) => {
   const movieElements = movies.map(curmovie => (
     <li key = {curmovie.id} className={styles.movie_list_element}>
       <Movie movie = {curmovie}/>

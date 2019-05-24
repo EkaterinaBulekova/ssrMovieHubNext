@@ -1,3 +1,6 @@
+import {
+  describe, it, expect,
+} from 'jest';
 import getQueryUrl from './query-builder';
 
 describe('getQueryUrl', () => {

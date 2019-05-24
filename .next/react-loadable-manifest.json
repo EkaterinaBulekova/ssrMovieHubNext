@@ -1,7 +1,7 @@
 {
   "../components/movie-detail/movie-detail": [
     {
-      "id": 1,
+      "id": 11,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -9,13 +9,13 @@
     {
       "id": "./components/movie-detail/movie-detail.js",
       "name": "./components/movie-detail/movie-detail.js",
-      "file": "static/chunks/3.js",
-      "publicPath": "static/chunks/3.js"
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
     }
   ],
   "../components/movie-list/movie-list": [
     {
-      "id": 1,
+      "id": 11,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -23,14 +23,14 @@
     {
       "id": "./components/movie-list/movie-list.js",
       "name": "./components/movie-list/movie-list.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
+      "file": "static/chunks/3.js",
+      "publicPath": "static/chunks/3.js"
     },
     {
       "id": "./components/movie-list/movie-list.js",
       "name": "./components/movie-list/movie-list.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
     }
   ],
   "./noop": [

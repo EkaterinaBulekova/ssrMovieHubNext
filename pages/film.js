@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import styled from 'styled-components';
 import fetch from 'isomorphic-unfetch';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -8,7 +9,6 @@ import AppFooter from '../components/footer/footer';
 import Button from '../components/button/button';
 import ErrorBoundary from '../components/error-boundary/error-boundary';
 import FilmsByGenre from '../components/films-by-genre/films-by-genre';
-import styles from './styles/movie-page.css';
 
 const DynamicMovieList = dynamic({
   loader: () => import('../components/movie-list/movie-list'),
@@ -34,13 +34,29 @@ type MovieType = {
   overview: String,
 };
 
+const BackButton = styled(Button)`{
+  flex: 0 1 25%;
+  margin: 1em 5%;
+  max-width: 7em;
+  max-height: 3em;
+  min-width: 7em;
+  min-height: 3em;
+  color:#ce5d6e;
+  font-size: 100%;
+  background-color: white;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+}
+`;
+
 const MoviePage = ({ film, films }: { film: MovieType, films: Array<MovieType> }) => (
   <div className="page">
     {
       film
     && <Header>
       <Link href="/">
-        <Button className={styles.search_button} name="SEARCH" />
+        <BackButton name="SEARCH" />
       </Link>
       <DynamicMovieDetail movie={film}/>
       <FilmsByGenre genres={film.genres}/>

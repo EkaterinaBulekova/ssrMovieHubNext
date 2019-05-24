@@ -1,3 +1,5 @@
+import { fn } from 'jest';
+
 const value = {
   data:
 [
@@ -17,5 +19,5 @@ const value = {
   },
 ],
 };
-const getData = jest.fn().mockImplementation(() => Promise.resolve(value));
+const getData = fn().mockImplementation(() => Promise.resolve(value));
 export default getData;
