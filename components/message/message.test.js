@@ -1,6 +1,9 @@
 import React from 'react';
+import {
+  beforeEach, afterEach, it, expect,
+} from 'jest';
 import ReactDOM from 'react-dom';
-import {act} from 'react-dom/test-utils';
+import { act } from 'react-dom/test-utils';
 import Message from './message';
 
 let container;
@@ -16,10 +19,10 @@ afterEach(() => {
 });
 
 it('can render with text', () => {
-    var testMessage = "Test message text"
-    act(() => {
-      ReactDOM.render(<Message text={testMessage} />, container);
-    });
-    const message = container.querySelector('div');
-    expect(message.textContent).toBe(testMessage);
+  const testMessage = 'Test message text';
+  act(() => {
+    ReactDOM.render(<Message text={testMessage} />, container);
+  });
+  const message = container.querySelector('div');
+  expect(message.textContent).toBe(testMessage);
 });

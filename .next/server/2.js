@@ -37,42 +37,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _movie_detail_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./movie-detail.css */ "./components/movie-detail/movie-detail.css");
 /* harmony import */ var _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_movie_detail_css__WEBPACK_IMPORTED_MODULE_1__);
- //import {connect} from "react-redux";
 
 
 
-var MovieDetail = function MovieDetail(props) {
-  return props.movie ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+var MovieDetail = function MovieDetail(_ref) {
+  var movie = _ref.movie;
+  return movie ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_img_box
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_img,
-    src: props.movie.poster_path
+    src: movie.poster_path
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_info
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_group
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_title
-  }, props.movie.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, movie.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_rating
-  }, props.movie.vote_average)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, movie.vote_average)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_group
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_release_date
-  }, new Date(props.movie.release_date).getFullYear().toString()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, new Date(movie.release_date).getFullYear().toString()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_duration
-  }, props.movie.runtime && props.movie.runtime + " min")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, movie.runtime && "".concat(movie.runtime, " min"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_group
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _movie_detail_css__WEBPACK_IMPORTED_MODULE_1___default.a.movie_detail_description
-  }, props.movie.overview)))) : null;
-}; // function mapStateToProps(state){
-//   const {movie} = state;
-//   return {movie: movie};
-// }
-
+  }, movie.overview)))) : null;
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (MovieDetail);
 

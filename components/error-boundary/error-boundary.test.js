@@ -1,22 +1,13 @@
 import React from 'react';
+import { it, expect, describe } from 'jest';
 import { shallow } from 'enzyme';
-import { ErrorBoundary } from './error-boundary';
-
-function ProblemChild() {
-  throw new Error('Error thrown from problem child');
-  return <div>Error</div>; // eslint-disable-line
-}
+import ErrorBoundary from './error-boundary';
 
 describe('<ErrorBoundary />', () => {
   const testClass = 'test-clss';
-  const testTitle = 'Something went wrong.'
+  const testTitle = 'Something went wrong.';
   const testError = 'Error thrown from problem child';
   const Something = () => null;
-
-//   it('renders an throw error', () => {
-//     const wrapper = shallow(<ErrorBoundary><ProblemChild /></ErrorBoundary>);
-//     expect(() => { wrapper.dive().html(); }).toThrowError(testError);
-//   });
 
   it('renders markup of error boundary', () => {
     const wrapper = shallow(<ErrorBoundary><Something/></ErrorBoundary>);

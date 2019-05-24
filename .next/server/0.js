@@ -36,8 +36,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var MovieList = function MovieList(props) {
-  var movieElements = props.movies.map(function (curmovie) {
+var MovieList = function MovieList(_ref) {
+  var movies = _ref.movies;
+  var movieElements = movies.map(function (curmovie) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: curmovie.id,
       className: _movie_list_css__WEBPACK_IMPORTED_MODULE_3___default.a.movie_list_element

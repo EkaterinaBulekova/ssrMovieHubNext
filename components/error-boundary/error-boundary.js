@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from "./error-boundary.css";
+import styles from './error-boundary.css';
 
-export class ErrorBoundary extends React.Component {
+export default class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { error: null, errorInfo: null };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     this.setState({
-      error: error,
-      errorInfo: errorInfo
-    })
+      error,
+      errorInfo,
+    });
   }
 
   render() {
@@ -27,6 +27,7 @@ export class ErrorBoundary extends React.Component {
         </div>
       );
     }
+    // eslint-disable-next-line react/prop-types
     return this.props.children;
   }
 }
